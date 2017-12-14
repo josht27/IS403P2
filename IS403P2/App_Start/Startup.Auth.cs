@@ -60,8 +60,8 @@ namespace IS403P2
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
-                ClientId = "573044498369-ua57c1akodsalqlnkgiov66j3ds0bi4f.apps.googleusercontent.com",
-                ClientSecret = "fZTLECK0RY54zVdRoDKuLssf"
+                ClientId = "682347687354-pkdqhbgk5el461rr2rjumvgd0udrhq77.apps.googleusercontent.com",
+                ClientSecret = "2jb1Qo3eQWi3XTcafFLFS1iu"
             });
         }
     }
