@@ -209,6 +209,16 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\charity.jpg" />
+    <Content Include="Content\Images\christus_statue_temple_square_salt_lake_city.jpg" />
+    <Content Include="Content\Images\flag_EC.png" />
+    <Content Include="Content\Images\flag_MX.jpg" />
+    <Content Include="Content\Images\flag_SC.png" />
+    <Content Include="Content\Images\Green Dragons.JPG" />
+    <Content Include="Content\Images\il_fullxfull.797003621_j1iw.jpg" />
+    <Content Include="Content\Images\jesus_charity.jpg" />
+    <Content Include="Content\Images\jesus_love.jpg" />
+    <Content Include="Content\Images\scripture_study.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -268,7 +278,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
