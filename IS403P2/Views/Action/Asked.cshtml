@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "Asked";
+}
+
+<div class="container">
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+        <li><a href="@Url.Action("Index", "Action")">Missions</a></li>
+        <li class="active">FAQ's</li>
+    </ol>
+</div>
+
+<center>
+    <h2 class="fontchange">President @ViewBag.President welcomes you to the </h2>
+    <h1 class="fontchange">@ViewBag.Mission Mission!</h1>
+</center>
+
+
+<center><h2 class="fontchange">Learn from missionaries that have served in your mission!</h2></center>
+<img src="@Url.Content(ViewBag.Flag)" style="width:100%" />
+
+
+<br /><br />
+<h2 class="fontchange">Fun facts about the mission:</h2>
+<h4>Address: @ViewBag.Address</h4>
+<h4>Language: @ViewBag.Language</h4>
+<h4>Climate: @ViewBag.Climate</h4>
+<h4>Dominant Religion: @ViewBag.Religion</h4>
+
+<br />
+<h2 class="fontchange">Questions:</h2>
+<h3>How hard was it to learn Spanish?</h3>
+<p>It is definitely hard to pick up at first, but you can get it with practice. Take advantage of the time you get for language study, and try to speak Spanish as much as possible. Don't be afraid to ask questions throughout the day about words you don't know.</p>
+@using (Html.BeginForm("Sign_in", "Home", FormMethod.Post, new { @class = "form-signin" }))
+{
+
+    <textarea name="message" rows="1" placeholder="Reply Here" style="display:inline"></textarea>
+    <button class="btn btn-xs btn-success" type="reset" style="display:inline">Reply</button>
+}
+<h3>How do you get along with your companion?</h3>
+<p>The best way is to serve them. Pray for love every day. Remember that they're human, and they will make mistakes just as you do.</p>
+@using (Html.BeginForm("Sign_in", "Home", FormMethod.Post, new { @class = "form-signin" }))
+{
+
+    <textarea name="message" rows="1" placeholder="Reply Here" style="display:inline"></textarea>
+    <button class="btn btn-xs btn-success" type="reset" style="display:inline">Reply</button>
+}
+<h3>Do they use toilet paper?</h3>
+<p>Not everywhere. It's best to always carry a small roll of TP or a pack of tissues or something just in case.</p>
+@using (Html.BeginForm("Sign_in", "Home", FormMethod.Post, new { @class = "form-signin" }))
+{
+
+    <textarea name="message" rows="1" placeholder="Reply Here" style="display:inline"></textarea>
+    <button class="btn btn-xs btn-success" type="reset" style="display:inline">Reply</button>
+}
+<h3>Does the weather change?</h3>
+<p>It's hot all year round; From December to March it rains pretty much every day. Take a really light rain jacket and shoes that will survive if they get wet.</p>
+@using (Html.BeginForm("Sign_in", "Home", FormMethod.Post, new { @class = "form-signin" }))
+{
+
+    <textarea name="message" rows="1" placeholder="Reply Here" style="display:inline"></textarea>
+    <button class="btn btn-xs btn-success" type="reset" style="display:inline">Reply</button>
+}
+<h3>Do you really have to wake up at 6:30 am every day?</h3>
+<p>Yes! Decide before you go that you will just get up every morning at 6:30, and it is way easier. If not, you will struggle every day to get out of bed. </p>
+@using (Html.BeginForm("Sign_in", "Home", FormMethod.Post, new { @class = "form-signin" }))
+{
+
+    <textarea name="message" rows="1" placeholder="Reply Here" style="display:inline"></textarea>
+    <button class="btn btn-xs btn-success" type="reset" style="display:inline">Reply</button>
+}
+<h3>How safe is it?</h3>
+<p>I never got robbed. Most people will respect that you're men and women of God at the least, so they won't bother you. Don't take anything valuable with you though, especially not a lot of cash. </p>
+@using (Html.BeginForm("Sign_in", "Home", FormMethod.Post, new { @class = "form-signin" }))
+{
+
+    <textarea name="message" rows="1" placeholder="Reply Here" style="display:inline"></textarea>
+    <button class="btn btn-xs btn-success" type="reset" style="display:inline">Reply</button>
+}
+<br /><br />
+
+@using (Html.BeginForm("Sign_in", "Home", FormMethod.Post, new { @class = "form-signin" }))
+{
+    <h2 class="fontchange">Ask a Question:</h2><br />
+
+    <textarea name="message" rows="5" cols="100" placeholder="Type Question Here"></textarea><br />
+            <br />
+            <button class="btn btn-lg btn-success" type="reset">Submit</button>
+}
