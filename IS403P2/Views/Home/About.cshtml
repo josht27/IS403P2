@@ -1,7 +1,25 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<center>
+    <img src="~/Content/Images/Green Dragons.JPG" height="70" />
 
-<p>Use this area to provide additional information.</p>
+    <h1 class="fontchange" style="display:inline">@ViewBag.Message</h1>
+</center>
+<h2 class="fontchange">@ViewBag.Title:</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div style="background: linear-gradient(to right, #006600 0%, #33cc33 100%); color:white; padding:10px;">
+            <p>
+                We have been helping the missionaries for the last 100 years. <br />
+                Most missionaries have just finished high school. <br />
+                These young men and young women don't know what it is like to be independent. <br />
+                You might worry about your child, but you don't need to.<br />
+                We know what we need to do to help these missionaries. <br />
+                We will take care of everything for 18 or 24 months. <br />
+                Just trust us.
+            </p>
+        </div>
+    </div>
+</div>
