@@ -58,11 +58,11 @@ namespace IS403P2
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "573044498369-ua57c1akodsalqlnkgiov66j3ds0bi4f.apps.googleusercontent.com",
+                ClientSecret = "fZTLECK0RY54zVdRoDKuLssf"
+            });
         }
     }
 }
