@@ -17,11 +17,10 @@ namespace IS403P1.Controllers
         // GET: Action
         public ActionResult Index()
         {
-            Mission newMission = new Mission();
             MQU mqu = new MQU();
             mqu.Mission = db.Mission.ToList();
 
-            return View(newMission);
+            return View(mqu);
         }
 
         public ActionResult Asked(string mish, string prez, string addy, string lang, string climate, string religion, string flag)
