@@ -13,16 +13,28 @@ namespace IS403P2.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+        [DisplayName("Mission Question ID")]
         public int missionQuestionID { get; set; }
+
+        [DisplayName("Question")]
         public string question { get; set; }
+
+        [DisplayName("Answer")]
         public string answer { get; set; }
 
+        [DisplayName("Mission ID")]
         public int? missionID { get; set; }
         [ForeignKey("missionID")]
+
+        [DisplayName("Mission")]
         public virtual Mission Mission { get; set; }
 
+        [DisplayName("User ID")]
         public int? userID { get; set; }
         [ForeignKey("userID")]
+
+        [DisplayName("User")]
         public virtual Users User { get; set; }
     }
 }
