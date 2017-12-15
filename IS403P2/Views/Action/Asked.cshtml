@@ -1,4 +1,5 @@
-﻿
+﻿@model IS403P2.Models.MQU
+
 @{
     ViewBag.Title = "Asked";
 }
@@ -12,21 +13,21 @@
 </div>
 
 <center>
-    <h2 class="fontchange">President @ViewBag.President welcomes you to the </h2>
-    <h1 class="fontchange">@ViewBag.Mission Mission!</h1>
+    <h2 class="fontchange">President @Model.Mission.missionPresidentName welcomes you to the </h2>
+    <h1 class="fontchange">@Model.Mission.missionName Mission!</h1>
 </center>
 
 
 <center><h2 class="fontchange">Learn from missionaries that have served in your mission!</h2></center>
-<img src="@Url.Content(ViewBag.Flag)" style="width:100%" />
+<!--<img src="Url.Content(ViewBag.Flag)" style="width:100%" />-->
 
 
 <br /><br />
 <h2 class="fontchange">Fun facts about the mission:</h2>
-<h4>Address: @ViewBag.Address</h4>
-<h4>Language: @ViewBag.Language</h4>
-<h4>Climate: @ViewBag.Climate</h4>
-<h4>Dominant Religion: @ViewBag.Religion</h4>
+<h4>Address: @Model.Mission.missionAddress</h4>
+<h4>Language: @Model.Mission.language</h4>
+<h4>Climate: @Model.Mission.climate</h4>
+<h4>Dominant Religion: @Model.Mission.dominantReligion</h4>
 
 <br />
 <h2 class="fontchange">Questions:</h2>

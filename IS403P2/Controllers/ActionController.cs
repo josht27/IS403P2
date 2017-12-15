@@ -17,22 +17,18 @@ namespace IS403P1.Controllers
         // GET: Action
         public ActionResult Index()
         {
-            MQU mqu = new MQU();
-            mqu.Mission = db.Mission.ToList();
-
-            return View(mqu);
+            var missionList = new List<Mission>();
+            missionList = db.Mission.ToList();
+            return View(missionList);
         }
 
-        public ActionResult Asked(string mish, string prez, string addy, string lang, string climate, string religion, string flag)
+        public ActionResult Asked(int id)
         {
-            ViewBag.Mission = mish;
-            ViewBag.President = prez;
-            ViewBag.Address = addy;
-            ViewBag.Language = lang;
-            ViewBag.Climate = climate;
-            ViewBag.Religion = religion;
-            ViewBag.Flag = flag;
-            return View();
+            MQU mqu = new MQU();
+
+            mqu.Mission = db.Mission.Find(id);
+
+            return View(mqu);
         }
     }
 }

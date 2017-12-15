@@ -1,4 +1,5 @@
-﻿@model IS403P2.Models.MQU
+﻿@model IEnumerable<IS403P2.Models.Mission>
+
 @{
     ViewBag.Title = "Index";
 }
@@ -12,9 +13,9 @@
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-            @foreach (var item in Model.Mission)
+            @foreach (var item in Model)
             {
-                <li><a href="@Url.Action("Asked", "Action", new { mish = "Mexico City Chalco", prez = "Crickmore", addy = "Calle Porvenir No. 8 Colonia Centro C.P. 56600 Chalco, Estado de Mexico, Mexico", lang = "Spanish", climate = "Temperate", religion = "Catholic", flag = "~/Content/Images/flag_MX.jpg" })">@item.missionName</a></li>
+                <li><a href="@Url.Action("Asked", "Action", new { id = item.missionID })">@item.missionName</a></li>
             }
         </ul>
     </div>
