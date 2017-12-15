@@ -9,12 +9,15 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using IS403P2.Models;
+using IS403P2.DAL;
 
 namespace IS403P2.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
+        private IS403P2Context db = new IS403P2Context();
+
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -335,6 +338,8 @@ namespace IS403P2.Controllers
                 case SignInStatus.Success:
                     if (loginInfo.Login.LoginProvider == "Google")
                     {
+                     
+
                         var externalIdentity = AuthenticationManager.GetExternalIdentityAsync(DefaultAuthenticationTypes.ExternalCookie);
 
                         var emailClaim = externalIdentity.Result.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email);
@@ -347,6 +352,8 @@ namespace IS403P2.Controllers
                         var email = emailClaim.Value;
                         var firstName = givenNameClaim.Value;
                         var lastname = lastNameClaim.Value;
+
+                        
                     }
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:

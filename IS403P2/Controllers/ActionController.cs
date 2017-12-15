@@ -13,7 +13,7 @@ namespace IS403P1.Controllers
 
     public class ActionController : Controller
     {
-        private IS403P2Context db = new IS403P2Context();
+        IS403P2Context db = new IS403P2Context();
 
         // GET: Action
         public ActionResult Index()
@@ -27,6 +27,7 @@ namespace IS403P1.Controllers
         {
             MQU mqu = new MQU();
 
+            mqu.MissionQuestions = db.MissionQuestions.Where(i => i.missionID == id).ToList();
             mqu.Mission = db.Mission.Find(id);
 
             return View(mqu);
