@@ -1,4 +1,4 @@
-﻿
+﻿@model IS403P2.Models.MQU
 @{
     ViewBag.Title = "Index";
 }
@@ -12,6 +12,14 @@
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
+            @foreach (var item in Model.Mission)
+            {
+                <li><a href="@Url.Action("Asked", "Action", new { mish = "Ecuador Guayaquil North", prez = "Riggins", addy = "Cdla. Kennedy Vieja, Calle G, No 601 y la 8va. Oeste, Edif. Mallorca 3er piso Guayqauil, Guayas, Ecuador", lang = "Spanish", climate = "Hot & Humid", religion = "Catholic", flag = "~/Content/Images/flag_EC.png"})">@item.missionName</a></li>
+            }
+            
+            
+
+
             <li><a href="@Url.Action("Asked", "Action", new { mish = "Ecuador Guayaquil North", prez = "Riggins", addy = "Cdla. Kennedy Vieja, Calle G, No 601 y la 8va. Oeste, Edif. Mallorca 3er piso Guayqauil, Guayas, Ecuador", lang = "Spanish", climate = "Hot & Humid", religion = "Catholic", flag = "~/Content/Images/flag_EC.png"})">Ecuador Guayaquil North</a></li>
             <li><a href="@Url.Action("Asked", "Action", new { mish = "Mexico City Chalco", prez = "Crickmore", addy = "Calle Porvenir No. 8 Colonia Centro C.P. 56600 Chalco, Estado de Mexico, Mexico", lang = "Spanish", climate = "Temperate", religion = "Catholic", flag = "~/Content/Images/flag_MX.jpg" })">Mexico City Chalco</a></li>
             <li><a href="@Url.Action("Asked", "Action", new { mish = "South Carolina Columbia", prez = "Holm", addy = "110 Oak Park Dr. Suite B Irmo SC 29063", lang = "Spanish", climate = "Hot & Humid", religion = "Baptist", flag = "~/Content/Images/flag_SC.png" })">South Carolina Columbia</a></li>
