@@ -7,17 +7,18 @@ using System.Web;
 
 namespace IS403P2.Models
 {
+    [Table("Mission")]
     public class Mission
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int missionID { get; set; }
-        public String missionName { get; set; }
-        public String missionPresidentName { get; set; }
-        public String missionAddress { get; set; }
-        public String language { get; set; }
-        public String climate { get; set; }
-        public String dominateReligion { get; set; }
-        public String flag { get; set; }
+        public string missionName { get; set; }
+        public string missionPresidentName { get; set; }
+        public string missionAddress { get; set; }
+        public string language { get; set; }
+        public string climate { get; set; }
+        public string dominantReligion { get; set; }
+        public string flag { get; set; }
     }
 }

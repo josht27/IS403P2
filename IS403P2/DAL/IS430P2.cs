@@ -8,8 +8,6 @@ using System.Web;
 namespace IS403P2.DAL
 {
     public class IS403P2Context : DbContext
-
-
     {
         public IS403P2Context() : base("IS403P2Context")
         {
@@ -19,8 +17,5 @@ namespace IS403P2.DAL
         public DbSet<Mission> Mission { get; set; }
         public DbSet<MissionQuestions> MissionQuestions { get; set; }
         public DbSet<Users> Users { get; set; }
-
-
-
     }
 }

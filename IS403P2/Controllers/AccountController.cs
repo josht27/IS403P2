@@ -348,7 +348,6 @@ namespace IS403P2.Controllers
                         var firstName = givenNameClaim.Value;
                         var lastname = lastNameClaim.Value;
                     }
-
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
