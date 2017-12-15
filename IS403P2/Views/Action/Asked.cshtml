@@ -34,17 +34,16 @@
 
 @foreach (var question in Model.MissionQuestions)
 {
-    @Html.BeginForm("Sign_in", "Home", FormMethod.Post, new { @class = "form-signin" })
-    {
-        <h2 class="fontchange">Question</h2>
-        <h5>@question.question</h5>
+    
+    <h3 class="fontchange">Question</h3>
+    <h4>@question.question</h4>
 
-        <br />
+    <br />
            
-        <h2>Answer</h2>
-        <h5>@question.answer</h5>
-    }
-
+    <h3>Answer</h3>
+    <h4>@question.answer Submitted by: @Model.Users.userEmail</h4>
+    
+    <br />
 }
 
 <h2>New Question?</h2>
