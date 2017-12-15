@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using IS403P2.DAL;
 using IS403P2.Models;
+using System.IO;
 
 namespace IS403P1.Controllers
 {
@@ -31,6 +32,12 @@ namespace IS403P1.Controllers
             mqu.Mission = db.Mission.Find(id);
 
             return View(mqu);
+        }
+
+        public ActionResult AddImage()
+        {
+            Mission mish = new Mission();
+            return View(mish);
         }
     }
 }
