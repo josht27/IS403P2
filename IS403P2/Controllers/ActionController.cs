@@ -12,7 +12,7 @@ namespace IS403P1.Controllers
 
     public class ActionController : Controller
     {
-        private IS403P2Context db = new IS403P2Context();
+        IS403P2Context db = new IS403P2Context();
 
         // GET: Action
         public ActionResult Index()
