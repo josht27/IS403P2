@@ -17,5 +17,6 @@ namespace IS403P2.DAL
         public DbSet<Mission> Mission { get; set; }
         public DbSet<MissionQuestions> MissionQuestions { get; set; }
         public DbSet<Users> Users { get; set; }
+        
     }
 }
