@@ -23,6 +23,7 @@ namespace IS403P1.Controllers
             return View(missionList);
         }
 
+        [Authorize]
         public ActionResult Asked(int id)
         {
             MQU mqu = new MQU();
