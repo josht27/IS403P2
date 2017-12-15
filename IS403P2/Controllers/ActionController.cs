@@ -26,6 +26,7 @@ namespace IS403P1.Controllers
         {
             MQU mqu = new MQU();
 
+            mqu.MissionQuestions = db.MissionQuestions.Where(i => i.missionID == id).ToList();
             mqu.Mission = db.Mission.Find(id);
 
             return View(mqu);
