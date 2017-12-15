@@ -4,11 +4,9 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="fontchange">All Questions</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
@@ -41,11 +39,15 @@
             @Html.DisplayFor(modelItem => item.answer)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.missionQuestionID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.missionQuestionID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.missionQuestionID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.missionQuestionID }, new { @class = "btn btn-warning" })
+            @Html.ActionLink("Details", "Details", new { id=item.missionQuestionID }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Delete", "Delete", new { id=item.missionQuestionID }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
 
 </table>
+
+<p>
+    @Html.ActionLink("Add a Question", "Create", null, new { @class = "btn btn-success" })
+</p>
