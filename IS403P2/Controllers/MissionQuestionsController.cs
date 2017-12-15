@@ -92,7 +92,7 @@ namespace IS403P2.Controllers
             {
                 db.Entry(missionQuestions).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Asked", "Action", new { id = missionQuestions.missionID });
             }
             ViewBag.missionID = new SelectList(db.Mission, "missionID", "missionName", missionQuestions.missionID);
             ViewBag.userID = new SelectList(db.Users, "userID", "userEmail", missionQuestions.userID);

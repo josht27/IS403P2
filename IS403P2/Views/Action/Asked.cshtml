@@ -34,7 +34,7 @@
 
 @foreach (var question in Model.MissionQuestions)
 {
-
+    
     <h3 class="fontchange">Question</h3>
     <h4>@question.question</h4>
 
@@ -45,13 +45,16 @@
     }
     else
     {
-
+        var email = TempData["placeholder"] as string;
         <tr>
             <td>
                 <h4>@question.answer</h4>
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", "MissionQuestions", new { id = question.missionQuestionID }, new { @class = "btn btn-success" })
+                <h5>Answered by @email</h5>
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", "MissionQuestions", new { id = question.missionQuestionID }, new { @class = "btn btn-success btn-sm" })
             </td>
         </tr>
     }
@@ -59,10 +62,5 @@
 }
 
 <h2>New Question?</h2>
+@Html.ActionLink("Create Question", "Create", "MissionQuestions", null, new { @class = "btn btn-success btn-md" })
 
-@using (Html.BeginForm("Sign_in", "Home", FormMethod.Post, new { @class = "form-signin" }))
-{
-
-    <textarea name="message" rows="1" placeholder="Ask Question Here..." style="display:inline"></textarea>
-    <button class="btn btn-xs btn-success" type="reset" style="display:inline">Submit Question</button>
-}
