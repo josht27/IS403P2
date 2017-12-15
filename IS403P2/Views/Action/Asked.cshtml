@@ -34,15 +34,27 @@
 
 @foreach (var question in Model.MissionQuestions)
 {
-    
+
     <h3 class="fontchange">Question</h3>
     <h4>@question.question</h4>
 
-    <br />
-           
-    <h3>Answer</h3>
-    <h4>@question.answer Submitted by: @Model.Users.userEmail</h4>
-    
+    <h3 class="fontchange">Answer</h3>
+    if (question.answer is null)
+    {
+        @Html.ActionLink("Reply", "Edit", "MissionQuestions", new { id = question.missionQuestionID }, new { @class = "btn btn-lg btn-success" });
+    }
+    else
+    {
+
+        <tr>
+            <td>
+                <h4>@question.answer</h4>
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", "MissionQuestions", new { id = question.missionQuestionID }, new { @class = "btn btn-success" })
+            </td>
+        </tr>
+    }
     <br />
 }
 

@@ -12,15 +12,15 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>MissionQuestions</h4>
+        <h4>Mission Questions</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.missionQuestionID)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.question, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.HiddenFor(model => model.question, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.question, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.HiddenFor(model => model.question, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.question, "", new { @class = "text-danger" })
             </div>
         </div>
