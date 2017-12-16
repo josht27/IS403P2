@@ -353,7 +353,7 @@ namespace IS403P2.Controllers
                         var firstName = givenNameClaim.Value;
                         var lastname = lastNameClaim.Value;
 
-                        
+                        TempData["placeholder"] = email;
                     }
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
