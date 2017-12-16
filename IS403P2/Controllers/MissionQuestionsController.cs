@@ -56,7 +56,7 @@ namespace IS403P2.Controllers
             {
                 db.MissionQuestions.Add(missionQuestions);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Asked", "Action", new { id = missionQuestions.missionID });
             }
 
             ViewBag.missionID = new SelectList(db.Mission, "missionID", "missionName", missionQuestions.missionID);
